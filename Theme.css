@@ -167,4 +167,43 @@
   .MuiSelect-icon {
     color: var(--white-70) !important;
   }
+
+/* 透明化 DataGrid 头部容器 */
+.MuiDataGrid-topContainer.MuiDataGrid-container--top.css-9dbfce,
+.MuiDataGrid-columnHeaders.css-1t374vw,
+.MuiDataGrid-row--borderBottom.css-gvoll6,
+.MuiDataGrid-columnHeader.MuiDataGrid-withBorderColor {
+  background-color: transparent !important;
+  backdrop-filter: blur(10px); /* 可选：添加模糊效果 */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* 添加底部边框，增强可视性 */
+}
+
+/* 透明化 DataGrid 头部标题 */
+.MuiDataGrid-columnHeaderTitle.css-1rxsvxt {
+  color: rgba(255, 255, 255, 0.9); /* 设置标题文字颜色为白色或浅色 */
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* 添加文字阴影，增强可读性 */
+}
+
+/* 透明化 DataGrid 头部按钮和图标 */
+.MuiButtonBase-root.MuiIconButton-root.css-xz9haa,
+.MuiSvgIcon-root.css-vh810p,
+.MuiSvgIcon-root.css-1l6e05h,
+.MuiSvgIcon-root.css-q7mezt {
+  color: rgba(255, 255, 255, 0.7); /* 设置图标颜色为浅色 */
+}
+
+/* 调整 DataGrid 头部分隔线 */
+.MuiDataGrid-columnSeparator.MuiDataGrid-columnSeparator--resizable {
+  border-color: rgba(255, 255, 255, 0.2); /* 调整分隔线颜色 */
+}
+
+/* 调整 DataGrid 头部菜单按钮 */
+.MuiButtonBase-root.MuiDataGrid-menuIconButton.css-xz9haa {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* 调整 DataGrid 头部排序按钮 */
+.MuiButtonBase-root.MuiIconButton-root.css-xz9haa[aria-label="Sort"] {
+  color: rgba(255, 255, 255, 0.7);
+}
   
