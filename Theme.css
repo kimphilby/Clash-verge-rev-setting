@@ -1,0 +1,170 @@
+:root {
+    --background-image-url: url("https://jtliu.us.kg/file/1740654017314.jpg");
+    --button-hover-background-color: rgba(74, 112, 127, 0.7);
+    --transparent-background: rgba(255, 255, 255, 0);
+    --text-shadow-color: rgba(0, 0, 0, 0.7);
+    --light-white: rgba(255, 255, 255, 0.1);
+    --light-white-hover: rgba(255, 255, 255, 0.2);
+    --white-70: rgba(255, 255, 255, 0.7);
+    --white-90: rgba(255, 255, 255, 0.9);
+    --grey-30: rgba(30,30,30,0.9);
+  }
+  
+  /* 整体背景 */
+  body, html, .layout, .base-page, .base-container, .base-page .base-container>section {
+    background-image: var(--background-image-url) !important;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 100vh;
+  }
+  
+  /* 模糊效果 */
+  .MuiBox-root {
+    background-color: var(--transparent-background) !important;
+    backdrop-filter: blur(3px);
+    transition: all 0.5s ease;
+  }
+  
+  .MuiBox-root:hover {
+    backdrop-filter: blur(5px);
+  }
+  
+  /* 移除特定 Box 的模糊效果 */
+  .MuiBox-root.css-79elbk, .MuiBox-root.css-mbssy4, .MuiBox-root.css-1ueg5w, .MuiBox-root.css-7bkud2 {
+    backdrop-filter: none;
+  }
+  
+  /* 容器和文本样式 */
+  .base-container, .MuiTypography-root {
+    background-color: var(--transparent-background) !important;
+  }
+  
+  /* 文本样式增强 */
+  .MuiTypography-root {
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+  }
+  
+  /* 按钮样式 */
+  .MuiButtonBase-root {
+    background-color: transparent !important;
+    color: white;
+    outline: 5px solid rgba(25, 28, 227, 0.95);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .MuiButtonBase-root:hover {
+    background-color: var(--button-hover-background-color);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* 自定义滚动条 */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: var(--light-white);
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: rgba(74, 112, 127, 0.6);
+    border-radius: 4px;
+  }
+  
+  /* 输入框样式 */
+  input, textarea, select {
+    background: var(--light-white) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    backdrop-filter: blur(8px);
+    color: white !important;
+    transition: all 0.3s ease;
+  }
+  
+  /* 聚焦状态增强可视性 */
+  input:focus, textarea:focus, select:focus {
+    background: rgba(255, 255, 255, 0.1) !important;
+    border-color: rgba(255, 255, 255, 0.3) !important;
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.2);
+  }
+  
+  /* 占位符文字透明效果 */
+  ::-webkit-input-placeholder, ::-moz-placeholder, :-ms-input-placeholder, :-moz-placeholder {
+    color: var(--white-70) !important;
+  }
+  
+  /* 卡片/面板样式 */
+  .MuiPaper-root {
+    background: var(--light-white) !important;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* 核心输入框透明化 */
+  .MuiOutlinedInput-root .MuiOutlinedInput-input {
+    background: rgba(255, 255, 255, 0.05) !important;
+    border: none !important;
+    color: var(--white-90) !important;
+    text-shadow: 0 2px 4px var(--text-shadow-color);
+  }
+  
+  /* 聚焦状态增强 */
+  .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-input {
+    background: rgba(255, 255, 255, 0.15) !important;
+    color: #fff !important;
+    box-shadow: 0 0 12px rgba(255, 255, 255, 0.2);
+  }
+  
+  /* 输入框背景透明 */
+  .MuiInputBase-root.MuiOutlinedInput-root.MuiSelect-root, div.MuiFormControl-root .MuiOutlinedInput-root {
+    background-color: transparent !important;
+  }
+  
+  /* 输入框内部input元素 */
+  div.MuiFormControl-root .MuiOutlinedInput-input {
+    background-color: transparent !important;
+    color: var(--white-90) !important;
+  }
+  
+  /* 聚焦状态 */
+  div.MuiFormControl-root .MuiOutlinedInput-root.Mui-focused {
+    background-color: var(--light-white-hover) !important;
+  }
+  
+  /* 边框透明 */
+  div.MuiFormControl-root .MuiOutlinedInput-notchedOutline, .MuiOutlinedInput-notchedOutline {
+    border-color: rgba(255, 255, 255, 0.2) !important;
+  }
+  
+  /* 鼠标悬停状态 */
+  div.MuiFormControl-root .MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline, .MuiInputBase-root.MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline {
+    border-color: rgba(255, 255, 255, 0.4) !important;
+  }
+  
+  /* 强制覆盖MUI默认样式 */
+  div.MuiFormControl-root.css-1jyu4ic .MuiOutlinedInput-root.css-ad0ese {
+    background-color: transparent !important;
+  }
+  
+  div.MuiFormControl-root.css-1jyu4ic .MuiOutlinedInput-input.css-s43tfo {
+    background-color: transparent !important;
+    color: var(--white-90) !important;
+  }
+  
+  /* 选择框输入区域透明 */
+  .MuiSelect-select.MuiOutlinedInput-input {
+    background-color: transparent !important;
+    color: var(--white-90) !important;
+  }
+  
+  /* 下拉图标颜色调整 */
+  .MuiSelect-icon {
+    color: var(--white-70) !important;
+  }
+  
