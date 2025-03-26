@@ -1,5 +1,5 @@
 :root {
-    --background-image-url: url("https://jtliu.us.kg/file/1740654017314.jpg");
+    --background-image-url: url("https://cloudflare-imgbed-cwm.pages.dev/file/其他/1739279434490_100141786_p0.png");
     --button-hover-background-color: rgba(74, 112, 127, 0.7);
     --transparent-background: rgba(255, 255, 255, 0);
     --text-shadow-color: rgba(0, 0, 0, 0.7);
@@ -13,6 +13,7 @@
   /* 整体背景 */
   body, html, .layout, .base-page, .base-container, .base-page .base-container>section {
     background-image: var(--background-image-url) !important;
+    background-position: right 35%;
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -206,4 +207,3 @@
 .MuiButtonBase-root.MuiIconButton-root.css-xz9haa[aria-label="Sort"] {
   color: rgba(255, 255, 255, 0.7);
 }
-  
