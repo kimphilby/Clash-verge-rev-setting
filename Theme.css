@@ -1,209 +1,121 @@
-:root {
-    --background-image-url: url("https://cloudflare-imgbed-cwm.pages.dev/file/其他/1739279434490_100141786_p0.png");
-    --button-hover-background-color: rgba(74, 112, 127, 0.7);
-    --transparent-background: rgba(255, 255, 255, 0);
-    --text-shadow-color: rgba(0, 0, 0, 0.7);
-    --light-white: rgba(255, 255, 255, 0.1);
-    --light-white-hover: rgba(255, 255, 255, 0.2);
-    --white-70: rgba(255, 255, 255, 0.7);
-    --white-90: rgba(255, 255, 255, 0.9);
-    --grey-30: rgba(30,30,30,0.9);
-  }
-  
-  /* 整体背景 */
-  body, html, .layout, .base-page, .base-container, .base-page .base-container>section {
-    background-image: var(--background-image-url) !important;
-    background-position: right 35%;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    min-height: 100vh;
-  }
-  
-  /* 模糊效果 */
-  .MuiBox-root {
-    background-color: var(--transparent-background) !important;
-    backdrop-filter: blur(3px);
-    transition: all 0.5s ease;
-  }
-  
-  .MuiBox-root:hover {
-    backdrop-filter: blur(5px);
-  }
-  
-  /* 移除特定 Box 的模糊效果 */
-  .MuiBox-root.css-79elbk, .MuiBox-root.css-mbssy4, .MuiBox-root.css-1ueg5w, .MuiBox-root.css-7bkud2 {
-    backdrop-filter: none;
-  }
-  
-  /* 容器和文本样式 */
-  .base-container, .MuiTypography-root {
-    background-color: var(--transparent-background) !important;
-  }
-  
-  /* 文本样式增强 */
-  .MuiTypography-root {
-    font-weight: 400;
-    letter-spacing: 0.5px;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
-  }
-  
-  /* 按钮样式 */
-  .MuiButtonBase-root {
-    background-color: transparent !important;
-    color: white;
-    outline: 5px solid rgba(25, 28, 227, 0.95);
-    transition: all 0.3s ease;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
-  
-  .MuiButtonBase-root:hover {
-    background-color: var(--button-hover-background-color);
-    transform: translateY(-2px);
-    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
-  }
-  
-  /* 自定义滚动条 */
-  ::-webkit-scrollbar {
-    width: 8px;
-  }
-  
-  ::-webkit-scrollbar-track {
-    background: var(--light-white);
-  }
-  
-  ::-webkit-scrollbar-thumb {
-    background: rgba(74, 112, 127, 0.6);
+/* 左侧选项卡 */
+.tab-container {
+    width: 200px; /* 固定宽度 */
+    padding: 16px;
+    background-color: rgba(0, 0, 0, 0.8); /* 半透明背景 */
+}
+
+.tab-item {
+    padding: 8px;
+    margin-bottom: 8px;
+    cursor: pointer;
+    color: #fff;
     border-radius: 4px;
-  }
-  
-  /* 输入框样式 */
-  input, textarea, select {
-    background: var(--light-white) !important;
-    border: 1px solid rgba(255, 255, 255, 0.1) !important;
-    backdrop-filter: blur(8px);
-    color: white !important;
-    transition: all 0.3s ease;
-  }
-  
-  /* 聚焦状态增强可视性 */
-  input:focus, textarea:focus, select:focus {
-    background: rgba(255, 255, 255, 0.1) !important;
-    border-color: rgba(255, 255, 255, 0.3) !important;
-    box-shadow: 0 0 8px rgba(255, 255, 255, 0.2);
-  }
-  
-  /* 占位符文字透明效果 */
-  ::-webkit-input-placeholder, ::-moz-placeholder, :-ms-input-placeholder, :-moz-placeholder {
-    color: var(--white-70) !important;
-  }
-  
-  /* 卡片/面板样式 */
-  .MuiPaper-root {
-    background: var(--light-white) !important;
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-  }
-  
-  /* 核心输入框透明化 */
-  .MuiOutlinedInput-root .MuiOutlinedInput-input {
-    background: rgba(255, 255, 255, 0.05) !important;
-    border: none !important;
-    color: var(--white-90) !important;
-    text-shadow: 0 2px 4px var(--text-shadow-color);
-  }
-  
-  /* 聚焦状态增强 */
-  .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-input {
-    background: rgba(255, 255, 255, 0.15) !important;
-    color: #fff !important;
-    box-shadow: 0 0 12px rgba(255, 255, 255, 0.2);
-  }
-  
-  /* 输入框背景透明 */
-  .MuiInputBase-root.MuiOutlinedInput-root.MuiSelect-root, div.MuiFormControl-root .MuiOutlinedInput-root {
-    background-color: transparent !important;
-  }
-  
-  /* 输入框内部input元素 */
-  div.MuiFormControl-root .MuiOutlinedInput-input {
-    background-color: transparent !important;
-    color: var(--white-90) !important;
-  }
-  
-  /* 聚焦状态 */
-  div.MuiFormControl-root .MuiOutlinedInput-root.Mui-focused {
-    background-color: var(--light-white-hover) !important;
-  }
-  
-  /* 边框透明 */
-  div.MuiFormControl-root .MuiOutlinedInput-notchedOutline, .MuiOutlinedInput-notchedOutline {
-    border-color: rgba(255, 255, 255, 0.2) !important;
-  }
-  
-  /* 鼠标悬停状态 */
-  div.MuiFormControl-root .MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline, .MuiInputBase-root.MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline {
-    border-color: rgba(255, 255, 255, 0.4) !important;
-  }
-  
-  /* 强制覆盖MUI默认样式 */
-  div.MuiFormControl-root.css-1jyu4ic .MuiOutlinedInput-root.css-ad0ese {
-    background-color: transparent !important;
-  }
-  
-  div.MuiFormControl-root.css-1jyu4ic .MuiOutlinedInput-input.css-s43tfo {
-    background-color: transparent !important;
-    color: var(--white-90) !important;
-  }
-  
-  /* 选择框输入区域透明 */
-  .MuiSelect-select.MuiOutlinedInput-input {
-    background-color: transparent !important;
-    color: var(--white-90) !important;
-  }
-  
-  /* 下拉图标颜色调整 */
-  .MuiSelect-icon {
-    color: var(--white-70) !important;
-  }
-
-/* 透明化 DataGrid 头部容器 */
-.MuiDataGrid-topContainer.MuiDataGrid-container--top.css-9dbfce,
-.MuiDataGrid-columnHeaders.css-1t374vw,
-.MuiDataGrid-row--borderBottom.css-gvoll6,
-.MuiDataGrid-columnHeader.MuiDataGrid-withBorderColor {
-  background-color: transparent !important;
-  backdrop-filter: blur(10px); /* 可选：添加模糊效果 */
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* 添加底部边框，增强可视性 */
 }
 
-/* 透明化 DataGrid 头部标题 */
-.MuiDataGrid-columnHeaderTitle.css-1rxsvxt {
-  color: rgba(255, 255, 255, 0.9); /* 设置标题文字颜色为白色或浅色 */
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* 添加文字阴影，增强可读性 */
+.tab-item.active {
+    background-color: #007AFF; /* 选中状态高亮 */
 }
 
-/* 透明化 DataGrid 头部按钮和图标 */
-.MuiButtonBase-root.MuiIconButton-root.css-xz9haa,
-.MuiSvgIcon-root.css-vh810p,
-.MuiSvgIcon-root.css-1l6e05h,
-.MuiSvgIcon-root.css-q7mezt {
-  color: rgba(255, 255, 255, 0.7); /* 设置图标颜色为浅色 */
+/* 中间代理信息 */
+.proxy-info {
+    flex: 1;
+    padding: 16px;
+    background-color: rgba(255, 255, 255, 0.9); /* 半透明背景 */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 阴影效果 */
 }
 
-/* 调整 DataGrid 头部分隔线 */
-.MuiDataGrid-columnSeparator.MuiDataGrid-columnSeparator--resizable {
-  border-color: rgba(255, 255, 255, 0.2); /* 调整分隔线颜色 */
+.proxy-name {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 8px;
 }
 
-/* 调整 DataGrid 头部菜单按钮 */
-.MuiButtonBase-root.MuiDataGrid-menuIconButton.css-xz9haa {
-  color: rgba(255, 255, 255, 0.7);
+.proxy-link {
+    color: #007AFF;
+    text-decoration: none;
 }
 
-/* 调整 DataGrid 头部排序按钮 */
-.MuiButtonBase-root.MuiIconButton-root.css-xz9haa[aria-label="Sort"] {
-  color: rgba(255, 255, 255, 0.7);
+/* 右侧节点选择 */
+.node-selection {
+    width: 300px;
+    padding: 16px;
+    background-color: rgba(255, 255, 255, 0.9); /* 半透明背景 */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 阴影效果 */
+}
+
+.node-list {
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.node-item {
+    padding: 8px;
+    margin-bottom: 8px;
+    cursor: pointer;
+    border-radius: 4px;
+    background-color: #f0f0f0;
+}
+
+.node-item:hover {
+    background-color: #e0e0e0;
+}
+
+/* 流量统计 */
+.traffic-stats {
+    position: fixed;
+    top: 0;
+    right: 0;
+    padding: 16px;
+    background-color: rgba(255, 255, 255, 0.9); /* 半透明背景 */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 阴影效果 */
+}
+
+
+
+/* 浅色主题 */
+@media (prefers-color-scheme: light) {
+    body {
+     background-image: url('https://w.wallhaven.cc/full/2k/wallhaven-2k33rx.jpg') !important; /* 浅色主题背景图 */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.8; /* 降低背景透明度 */
+    }
+}
+
+/* 深色主题 */
+@media (prefers-color-scheme: dark) {
+    body {
+        background-image: url('https://w.wallhaven.cc/full/j8/wallhaven-j831k5.png') !important; /* 深色主题背景图 */
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        opacity: 0.8; /* 降低背景透明度 */
+    }
+}
+
+
+/* 背景图案 */
+
+
+/* 按钮和交互元素 */
+button {
+    padding: 8px 16px;
+    background-color: #007AFF;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #005BB5;
+}
+
+button:active {
+    background-color: #004080;
 }
