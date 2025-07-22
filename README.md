@@ -1,5 +1,7 @@
 # 简介
-简单的透明化的clash verge rev theme
+自用clash verge rev配置
 # 使用效果
 
-![demo](demo.png)
+![白天](light.png)
+
+![夜晚](dark.png)
